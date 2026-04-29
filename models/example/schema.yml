@@ -6,3 +6,16 @@ sources:
       tables:
         - name: raw_customers
         - name: orders
+          columns:
+            - name: id
+              tests:
+               - unique
+               - not_null
+            - name: status
+              tests:
+                - accepted_values: 
+                    arguments:
+                     values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
+        - name: customers
+        - name: EMPLOYEE_SAL
+          

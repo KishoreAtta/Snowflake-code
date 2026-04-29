@@ -1,0 +1,1 @@
+select Empid,Empname,({{calculate_amount('Salary','Tax')}}) as total_amount from {{source('datafeed_shared_schema','EMPLOYEE_SAL')}}

@@ -1,0 +1,1 @@
+select id,location,company,firstname,lastname from {{source('datafeed_shared_schema','customers')}}  having location in('US')
